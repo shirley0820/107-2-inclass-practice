@@ -13,5 +13,20 @@ knitr::opts_chunk$set(echo = TRUE)
 a <- 2
 3 -> b
 c <- 6
+d<- 89L
 ```
+
+```{r}
+class(d)
+class(c)
+class(aVector)
+```
+
+```{r}
+aVector<-c(5,6,7)
+a2Vector<-c(5L,6L,7L)
+```
+
+
+
 
