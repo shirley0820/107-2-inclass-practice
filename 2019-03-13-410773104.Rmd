@@ -12,5 +12,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 a <- 2
 3 -> b
+c <- 6
 ```
 
