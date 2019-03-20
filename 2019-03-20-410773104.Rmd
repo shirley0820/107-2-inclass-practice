@@ -69,3 +69,7 @@ as.integer(dtObject)
 as.double(dtObject)
 ```
 
+```{r}
+Sys.timezone()
+```
+
