@@ -26,3 +26,23 @@ class(aLogical)
 sum(aLogical)
 ```
 
+```{r}
+birthplace <- factor(
+  c("台北市","新北市","台中市")
+) 
+class(birthplace)
+typeof(birthplace)
+levels(birthplace)
+as.integer(birthplace)
+```
+```{r}
+studentMajors <- factor(
+  c("經濟系", "經濟系", "法律系")
+)
+typeof(studentMajors)
+levels(studentMajors)
+studentMajors
+as.integer(studentMajors)
+```
+
+
