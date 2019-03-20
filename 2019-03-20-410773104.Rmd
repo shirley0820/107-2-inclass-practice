@@ -1,0 +1,28 @@
+---
+title: '2019-03-20'
+author: ""
+date: "3/20/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+dialogue <- c("小明說：'明天不用上課。'",
+               "小花說：'真的嗎？'")
+
+cat(dialogue, sep="\n")
+```
+
+```{r}
+aLogical <- c(T,TRUE,F,FALSE,FALSE,T,T)
+class(aLogical)
+```
+
+```{r}
+# 加總向量內的所有元素值。
+sum(aLogical)
+```
+
