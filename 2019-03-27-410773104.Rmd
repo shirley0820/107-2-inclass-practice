@@ -38,6 +38,27 @@ timeone
 
 timetwo <- mdy("March 3, 2019")
 timetwo
+
+as.double(timeone)
+as.double(timetwo)
+as.double(currenttime)
 ```
 
+```{r}
+e <- c(1, 5, -3)
+f <- c(0.5, 12, 2)
+
+e+f
+e+a
+
+eL <- c(1L, 5L, -3L)
+fL <- c(-2L, -4L, 8L)
+
+class(e+fL)
+class(eL+fL)
+
+e*f
+eL*fL
+e^f
+```
 
