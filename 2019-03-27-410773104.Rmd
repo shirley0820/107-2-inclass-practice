@@ -22,5 +22,22 @@ LisbonDateTime
 AthensTime <- with_tz(twDateTime,tzone="Europe/Athens")
 
 AthensTime
+
+as.double(twDateTime)
+as.double(LisbonDateTime)
+as.double(AthensTime)
 ```
+
+```{r}
+currenttime <- dmy_h("27-03-2019 15")
+
+currenttime
+
+timeone <- ymd("2018-09-11")
+timeone
+
+timetwo <- mdy("March 3, 2019")
+timetwo
+```
+
 
