@@ -60,5 +60,56 @@ class(eL+fL)
 e*f
 eL*fL
 e^f
+
+twDateTime+1
+timetwo-timeone
+class(timetwo-timeone)
+as.double(timetwo-timeone)
+```
+
+```{r}
+startingDate <- ymd("2019-03-27")
+startingDate + years(1)
+startingDate + dyears(1)
+```
+
+```{r}
+x <- 5
+y <- 7
+x2 <- c(1,5,10)
+y2 <- c(-1,5,20)
+
+x > y
+y > x
+x2 > y2
+x > 0
+
+x3 <- c("小明","小花")
+y3 <- c("小明","小華")
+
+x3 == y3
+
+x4 <- c(1,5,8)
+y4 <- c(5,8)
+
+x4 %in% y4
+
+x2 %in% y2
+```
+
+```{r}
+x5 <- c(1,NA,10)
+y5 <- c(-1,NA,20)
+
+x6 <- c(NA,"小花")
+y6 <- c(NA,"小華")
+
+x5 == y5
+x6 == y6
+
+is.na(x5)
+is.na(x6)
+
+x5 + y5
 ```
 
