@@ -62,3 +62,51 @@ xor(x7 %in% greatTaipei, y7=="女")
 which(xor(x7 %in% greatTaipei, y7=="女"))
 ```
 
+```{r}
+library(readr)
+exData2 <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/exData2.csv")
+date <- as.character(exData2$期間)
+currency <- exData2$幣別
+exchangeRate <- exData2$匯率
+```
+
+```{r}
+class (date)
+```
+
+```{r}
+library(lubridate)
+date <- ymd(date)
+```
+
+```{r}
+class(date)
+```
+
+```{r}
+head(as.integer(date))
+as.integer(ymd("1980-08-01"))
+head(date >= ymd("1980-08-01"))
+
+isAfter19800801 <- date >= ymd("1980-08-01")
+sum(isAfter19800801)
+```
+
+```{r}
+isEURO <- currency == "歐元USD/EUR"
+sum(isEURO)
+```
+
+```{r}
+isexchangerateNA <- is.na(exchangeRate)
+sum(isexchangerateNA)
+```
+
+```{r}
+isNotNA <- !is.na(exchangeRate)
+isEURO <- currency == "歐元USD/EUR"
+
+satisgyBoth <- (isNotNA & isEURO)
+sum(satisgyBoth)
+```
+
