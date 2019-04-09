@@ -33,3 +33,32 @@ length(levels(currency))
 sum(currency == "日圓JPY/USD")
 ```
 
+```{r}
+x7 <- c("台北市","新北市","高雄市")
+greatTaipei <- c("台北市","新北市")
+
+x7 %in% greatTaipei
+!(x7 %in% greatTaipei)
+```
+
+```{r}
+y7 <- c("女","男","女")
+
+y7=="女"
+!(y7=="女")
+```
+
+```{r}
+x7 %in% greatTaipei
+y7 =="女"
+
+(x7 %in% greatTaipei) & (y7=="女")
+which((x7 %in% greatTaipei) & (y7=="女"))
+
+(x7 %in% greatTaipei) | (y7=="女")
+which((x7 %in% greatTaipei) | (y7=="女"))
+
+xor(x7 %in% greatTaipei, y7=="女")
+which(xor(x7 %in% greatTaipei, y7=="女"))
+```
+
