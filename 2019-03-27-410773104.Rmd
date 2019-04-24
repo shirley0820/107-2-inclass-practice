@@ -95,7 +95,15 @@ y4 <- c(5,8)
 x4 %in% y4
 
 x2 %in% y2
+
 ```
+
+```{r}
+test <- x2 %in% y2
+test
+class(test)
+```
+
 
 ```{r}
 x5 <- c(1,NA,10)
