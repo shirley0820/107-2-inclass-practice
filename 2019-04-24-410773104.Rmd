@@ -99,4 +99,30 @@ StuDF2 <- data.frame(
   stringsAsFactors = FALSE
   )
 StuDF2 
+
+StuDF2[['學號']][[3]]
 ```
+
+
+```{r}
+chosenLETTERS <- LETTERS[1:15]
+matObj1 <- matrix(chosenLETTERS,5,3)
+matObj1
+```
+
+```{r}
+LETTERS
+chosenLETTERS <- LETTERS[1:8]
+m <- matrix(chosenLETTERS,2,4)
+m
+tolower(m) # 轉成小寫
+m
+toupper(m) # 轉成大寫
+m
+
+```
+
+```{r}
+matObj1[c(T,F,F,T,F),c(F,T,T)]
+```
+
