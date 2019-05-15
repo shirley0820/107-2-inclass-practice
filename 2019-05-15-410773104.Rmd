@@ -62,3 +62,44 @@ colnames(StuDF2)[c(2,3)] <- c("name","grade")
 colnames(StuDF2)
 StuDF2
 ```
+
+```{r}
+a <- c("1","b","TRUE")
+a
+a[[2]] <- "c" # 元素存在
+a[[5]] <- "7" # 元素不存在
+a
+```
+
+```{r}
+b <- list(
+  元素1=1,
+  元素2="Hello",
+  元素3=TRUE
+)
+b[[3]] <- "False"
+b[[5]] <- "7"
+b
+```
+
+```{r}
+#使用"元素名稱"創新元素
+names(b)
+b[["新元素A"]] <- c(1,2,3)
+b$新元素B <- c(T,F,T)
+b
+```
+
+
+```{r}
+library(readr)
+exData3 <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/exData3.csv",
+                    col_types = cols(
+                      匯率 = col_number(),
+                      期間 = col_character()))
+
+library(lubridate)
+exData3$期間 <- ymd(exData3$期間)
+class(exData3)
+```
+
