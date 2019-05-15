@@ -14,6 +14,8 @@ dialogue <- c("小明說：'明天不用上課。'",
                "小花說：'真的嗎？'")
 
 cat(dialogue, sep="\n")
+
+dialogue
 ```
 
 ```{r}
@@ -45,6 +47,26 @@ studentMajors
 as.integer(studentMajors)
 ```
 
+charater cannot be calculated
+```{r}
+stringInteger <- c("1","2","-11")
+class(stringInteger) # 無法進行數值運算
+
+trueInteger <- as.integer(stringInteger)
+class(trueInteger) # 可以進行數值運算
+sum(trueInteger)
+
+a <- 5
+b <- 6
+c <- -11
+
+class(a)
+a+b+c
+
+
+```
+
+
 ```{r}
 library(lubridate)
 ```
@@ -71,5 +93,15 @@ as.double(dtObject)
 
 ```{r}
 Sys.timezone()
+```
+
+```{r}
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+twDateTime
+as.integer(twDateTime)
+
+LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
+LisbonDateTime
+as.integer(LisbonDateTime)
 ```
 
