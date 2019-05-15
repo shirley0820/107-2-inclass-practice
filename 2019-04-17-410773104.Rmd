@@ -4,7 +4,6 @@ author: "林茂廷"
 date: "4/17/2019"
 output: html_document
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -14,6 +13,36 @@ library(dplyr)
 library(stringr)
 library(lubridate)
 ```
+
+```{r}
+a<-c(1:3)
+typeof(a)
+a
+
+aWithNames <- c(
+  a1=1,
+  a2=2,
+  a3=3
+)
+typeof(a)
+aWithNames
+```
+
+```{r}
+b1<-list("a","b",c(1:10))
+typeof(b1)
+
+b2<-list(
+  第一個="a",
+  第二個="b",
+  第三個=c(1:10))
+
+b1
+b2
+
+typeof(b2)
+```
+
 
 ```{r}
 plasticContainer <- list(
@@ -30,11 +59,18 @@ plasticContainer[["greenBox"]][[1]]
 ```
 
 ```{r}
+plasticContainer[c("greenBox","redBox")] 
+plasticContainer[c(1,2)]
+```
+
+
+```{r}
 成績單 <- c(
   個經=90,
   總經=77,
   統計=88
 )
+
 
 成績單[[1]]
 ```
@@ -64,8 +100,11 @@ studentRecord [["學年平均成績"]] [[3]]
 extract1 <- plasticContainer[c("greenBox")]
 extract2 <- plasticContainer[[c("greenBox")]]
 
-extract1[[1]][[1]]
-extract2[[1]]
+extract1
+extract2
+
+class(extract1)
+class(extract2)
 ```
 
 對應「個別」元素要（TRUE）/不要（FALSE）取出來
