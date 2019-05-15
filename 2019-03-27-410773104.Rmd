@@ -74,6 +74,13 @@ startingDate + dyears(1)
 ```
 
 ```{r}
+ymd("2000-02-01") -> startingDate2
+ymd("2019-08-11") -> endingDate
+endingDate - startingDate2
+```
+
+
+```{r}
 x <- 5
 y <- 7
 x2 <- c(1,5,10)
