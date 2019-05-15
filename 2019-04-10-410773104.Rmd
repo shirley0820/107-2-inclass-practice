@@ -39,9 +39,9 @@ char1
 day 
 char2
 str_c(month,char1,day,char2)
-month
-day
-str_c(month,day, sep="-")
+str_c(month,c("月"),day,c("日"))
+str_c(month,"月",day,"日")
+str_c(month,day, sep="/")
 ```
 
 ```{r}
@@ -53,6 +53,14 @@ str_split(dates,"-")
 dates
 str_replace(dates,"-","月")
 ```
+
+```{r}
+dates2 <- c("3-11-2019", "4-5-2017",  "2-7-2015")
+dates2
+str_replace(dates2,"-","/")
+str_replace_all(dates2,"-","/")
+```
+
 
 ```{r}
 library(readr)
