@@ -1,0 +1,38 @@
+---
+title: "Untitled"
+author: "shirley"
+date: "2019年5月22日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(lubridate)
+
+time1 <- ymd_hms("1973-02-21 12:05:22")
+time1
+time2 <- with_tz(time1,tzone ="Asia/Taipei")
+time2
+
+
+```
+
+#ymd_hms_tzChange(input,fromTzone,toTzone)
+```{r}
+ymd_hms_tzChange <- function(input,fromTzone,toTzone){
+  time1 <- ymd_hms(input,tz=fromTzone)
+  answer <- with_tz(time1,tzone = toTzone)
+  return(answer)
+}
+```
+
+```{r}
+library(stringr)
+sample(99:103,15,replace = T)-> yy
+sample(1:12,15,replace=T)-> mm
+str_c("民國",str_pad(yy,3,"left","0"),"年",mm,"月") -> twDates
+```
+
