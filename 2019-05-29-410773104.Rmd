@@ -56,7 +56,7 @@ if(a < 0) {
 supply_fun3 <- function(P,a,b){
   Qs <- a+b*P
   if(P < 0) {
-    message("P can't be negative") # 在螢幕出現的「錯誤」提示，沒有輸出任何值
+    message("P can't  be negative") # 在螢幕出現的「錯誤」提示，沒有輸出任何值
   } else {
     return(Qs)
   }
@@ -92,5 +92,40 @@ gpa_fun <- function(studentID){
 
 gpa_fun("92aS67fee") 
 gpa_fun("aa829838s")
+```
+
+```{r}
+fizzbuzz <- function(number){
+  if(number %% 15== 0){
+    return("fizzbuzz")}
+    else if(number%% 3 ==0){
+      return("fizz")
+    }else if (number%% 5 == 0){
+      return("buzz")
+    }else {
+      return(number)
+    }
+  }
+```
+
+```{r}
+b<- c(5,1,3)
+```
+
+#要每個b元素都>2，使用all()
+```{r}
+if(all(b>2)){
+  print("b大於2")
+} else{
+  print("不是所有的b都大於2")
+}
+
+```
+
+#只要其中一個b元素>2，使用any()
+```{r}
+if(any(b>2)){
+  print("b大於2")
+}
 ```
 
