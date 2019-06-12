@@ -69,3 +69,33 @@ cat("修正後狀況\n")
 gmailAddress
 ```
 
+```{r}
+load(url("https://www.dropbox.com/s/qnz9paigf61yjus/commitHistory.Rda?raw=1"))
+
+```
+
+print「第i個」commit的author。
+
+```{r}
+i<-1
+print(commitHistory[[i]][["commit"]][["author"]][["name"]])
+```
+
+```{r}
+for(i in seq_along(commitHistory)){
+  print(commitHistory[[i]][["commit"]][["author"]][["name"]])
+}
+```
+
+```{r}
+for(i in seq_along(commitHistory)){
+  print(
+    str_c(
+      "Author is ",
+      commitHistory[[i]][["commit"]][["author"]][["name"]],
+      ". Committer is ",
+      commitHistory[[i]][["commit"]][["committer"]][["name"]]
+      )
+    )
+}
+```
